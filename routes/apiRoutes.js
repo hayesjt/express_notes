@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const fs = require("fs");
 
-// GETTING ALL NOTES IN DB.JSON FILE TO DISPLAY ON SCREEN
+// fetching all data from db.json to display
 router.get("/notes", function (req, res) {
     fs.readFile("db/db.json", "utf8", function (err, data) {
         if (err) {
@@ -12,10 +12,10 @@ router.get("/notes", function (req, res) {
     });
 });
 
-// POSTING NEW NOTES TO POST TO DB.JSON IN ORDER TO SHOW ON PAGE
+// POSTING new notes to db.json
 router.post("/notes", function (req, res) {
 
-    // READING THE FILE FIRST SO WE DONT OVERRIDE OTHER DATA
+    // reading and fetching the those on the file first - we dont want to overwrite
     fs.readFile("db/db.json", "utf8", function (err, data) {
         if (err) {
             console.log("File read failed: " + err);
@@ -27,7 +27,7 @@ router.post("/notes", function (req, res) {
             lastID = origData[i].id;
         }
 
-        // GIVING AN ID TO THE NOTE SO IT CAN DISPLAY
+        // All notes need an id for the CRUD functions to properly work
         let newNote = req.body;
 
         lastID++;
@@ -36,7 +36,7 @@ router.post("/notes", function (req, res) {
         origData.push(newNote);
 
        
-        // WRITING TO JSON FILE SO IT CAN DISPLAY ON WEBSITE
+        // Writing to db.json so display happens
         fs.writeFile('db/db.json', JSON.stringify(origData), 'utf8', function (err) {
             if (err) throw err;
             console.log('The file has been saved!');
