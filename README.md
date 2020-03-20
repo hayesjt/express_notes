@@ -13,6 +13,3 @@ The db.JSON files acts as a database and the routes I have set up do the CRUD fu
 
 # Tech Used
 HTML, JSON, CSS, Bootstrap, JavaScript
-
-
-djslkbd
