@@ -1,15 +1,28 @@
 # express_notes
-An App that allows you to take notes, save notes, and delete notes using express. 
 
-# Working Link
-https://expressnoteshaylee.herokuapp.com/
+    A website that acts as a note manager tool. The user can create, edit, save, and delete notes.
 
-No log in info is needed
+    The follwoing features are included:
+    - Easy title and open window for writing notes
+    - easy save button when the user is ready to keep that note
+    - easy delete button if that note is not needed anymore
 
-<img src='public/assets/img/expressnotes.gif' />
+Start taking notes at [Note Taker](https://expressnoteshaylee.herokuapp.com/)
 
-# How it Works 
-The db.JSON files acts as a database and the routes I have set up do the CRUD functions directly in that file.
+# Future Add's
+
+    - Log in function with sections for notes such as cooking recipies, important dates, etc.
+    - Note preview, not just the title
+    - No landing page - log in would replace it
 
 # Tech Used
-HTML, JSON, CSS, Bootstrap, JavaScript
+    -HTML
+    -JSON
+    -CSS
+    -Mongo
+    -Bootstrap
+    -JavaScript
+
+# Preview GIF
+
+<img src='public/assets/img/expressnotes.gif' />
